@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+
+  /* Header styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7dd56f;
+    padding: 20px;
+    color: #fff;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  #read-book-btn {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  #read-book-btn:hover {
+    background-color: #333;
+    color: #fff;
+  }
+
+  /* Main styles */
+  main {
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #viewerCanvas {
+    width: 600px;
+    height: 600px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Media queries for small screens */
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 24px;
+    }
+    #viewerCanvas {
+      width: 100%;
+      height: auto;
+    }
+  }
