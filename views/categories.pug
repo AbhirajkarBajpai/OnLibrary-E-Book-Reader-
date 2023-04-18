@@ -1,0 +1,241 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='css/categories.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css')
+  title Categories
+header.header
+  .header-1
+    a.logo(href='#' style='position: relative; left: -100px; font-size: 40px') OnLibrary
+    form.search-form(action='')
+      input#search-box(type='search' name='' placeholder='search here...')
+      label.fas.fa-search(for='search-box')  
+  .header-2
+    nav.navbar
+      // <a href="#home">home</a>
+      a(href='#fiction') fiction
+      a(href='#non-fiction') non-fiction
+nav.bottom-navbar
+  // <a href="#home" class="fas fa-home"></a>
+  a.fas.fa-comments(href='#fiction')
+  a.fas.fa-tags(href='#non-fiction')
+div
+  h1#fiction.fiction fiction
+  .romance
+    h1.heading
+      span romance
+    ul(style='display: flex')
+      a(href=`/read-book?id=${filteredRomanceBooks[0].id}`)
+        li.arrival-box
+          img(src=`${filteredRomanceBooks[0].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredCrimeBooks[0].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredRomanceBooks[1].id}`)
+        li.arrival-box
+          img(src=`${filteredRomanceBooks[1].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredRomanceBooks[1].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredRomanceBooks[2].id}`)
+        li.arrival-box
+          img(src=`${filteredRomanceBooks[2].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredRomanceBooks[2].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+    ul(style='display: flex')
+      a(href=`/read-book?id=${filteredRomanceBooks[3].id}`)
+        li.arrival-box
+          img(src=`${filteredRomanceBooks[3].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredRomanceBooks[3].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredRomanceBooks[4].id}`)
+        li.arrival-box
+          img(src=`${filteredRomanceBooks[4].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredRomanceBooks[4].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredRomanceBooks[5].id}`)
+        li.arrival-box
+          img(src=`${filteredRomanceBooks[5].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredRomanceBooks[5].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+  .poetry
+    h1.heading
+      span poetry
+    ul(style='display: flex')
+      a(href=`/read-book?id=${filteredPoetryBooks[0].id}`)
+        li.arrival-box
+          img(src=`${filteredPoetryBooks[0].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredPoetryBooks[0].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredPoetryBooks[1].id}`)
+        li.arrival-box
+          img(src=`${filteredPoetryBooks[1].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredPoetryBooks[1].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredPoetryBooks[2].id}`)
+        li.arrival-box
+          img(src=`${filteredPoetryBooks[2].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredPoetryBooks[2].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+    ul(style='display: flex')
+      a(href=`/read-book?id=${filteredPoetryBooks[3].id}`)
+        li.arrival-box
+          img(src=`${filteredPoetryBooks[3].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredPoetryBooks[3].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredPoetryBooks[4].id}`)
+        li.arrival-box
+          img(src=`${filteredPoetryBooks[4].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredPoetryBooks[4].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredPoetryBooks[5].id}`)
+        li.arrival-box
+          img(src=`${filteredPoetryBooks[5].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredPoetryBooks[5].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+  .horror
+    h1.heading
+      span horror
+    ul(style='display: flex')
+      a(href=`/read-book?id=${filteredHorrorBooks[0].id}`)
+        li.arrival-box
+          img(src=`${filteredHorrorBooks[0].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredHorrorBooks[0].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredHorrorBooks[1].id}`)
+        li.arrival-box
+          img(src=`${filteredHorrorBooks[1].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredHorrorBooks[1].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredHorrorBooks[2].id}`)
+        li.arrival-box
+          img(src=`${filteredHorrorBooks[2].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredHorrorBooks[2].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+    ul(style='display: flex')
+      a(href=`/read-book?id=${filteredHorrorBooks[3].id}`)
+        li.arrival-box
+          img(src=`${filteredHorrorBooks[3].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredHorrorBooks[3].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredHorrorBooks[4].id}`)
+        li.arrival-box
+          img(src=`${filteredHorrorBooks[4].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredHorrorBooks[4].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredHorrorBooks[5].id}`)
+        li.arrival-box
+          img(src=`${filteredHorrorBooks[5].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredHorrorBooks[5].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+  .crime
+    h1.heading
+      span crime
+    ul(style='display: flex')
+      a(href=`/read-book?id=${filteredCrimeBooks[0].id}`)
+        li.arrival-box
+          img(src=`${filteredCrimeBooks[0].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredCrimeBooks[0].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredCrimeBooks[1].id}`)
+        li.arrival-box
+          img(src=`${filteredCrimeBooks[1].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredCrimeBooks[1].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredCrimeBooks[2].id}`)
+        li.arrival-box
+          img(src=`${filteredCrimeBooks[2].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredCrimeBooks[2].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+    ul(style='display: flex')
+      a(href=`/read-book?id=${filteredCrimeBooks[3].id}`)
+        li.arrival-box
+          img(src=`${filteredCrimeBooks[3].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredCrimeBooks[3].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredCrimeBooks[4].id}`)
+        li.arrival-box
+          img(src=`${filteredCrimeBooks[4].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredCrimeBooks[4].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredCrimeBooks[5].id}`)
+        li.arrival-box
+          img(src=`${filteredCrimeBooks[5].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredCrimeBooks[5].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+  br
+  br
+div
+  h1#non-fiction.fiction non-fiction
+  .autobiography
+    h1.heading
+      span autobiography
+    ul(style='display: flex')
+      a(href=`/read-book?id=${filteredAutobiographyBooks[0].id}`)
+        li.arrival-box
+          img(src=`${filteredAutobiographyBooks[0].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredAutobiographyBooks[0].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredAutobiographyBooks[1].id}`)
+        li.arrival-box
+          img(src=`${filteredAutobiographyBooks[1].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredAutobiographyBooks[1].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredAutobiographyBooks[2].id}`)
+        li.arrival-box
+          img(src=`${filteredAutobiographyBooks[2].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredAutobiographyBooks[2].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+    ul(style='display: flex')
+      a(href=`/read-book?id=${filteredAutobiographyBooks[3].id}`)
+        li.arrival-box
+          img(src=`${filteredAutobiographyBooks[3].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredAutobiographyBooks[3].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredAutobiographyBooks[4].id}`)
+        li.arrival-box
+          img(src=`${filteredAutobiographyBooks[4].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredAutobiographyBooks[4].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredAutobiographyBooks[5].id}`)
+        li.arrival-box
+          img(src=`${filteredAutobiographyBooks[5].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredAutobiographyBooks[5].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+  .biography
+    h1.heading
+      span biography
+    ul(style='display: flex')
+      a(href=`/read-book?id=${filteredBiographyBooks[0].id}`)
+        li.arrival-box
+          img(src=`${filteredBiographyBooks[0].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredBiographyBooks[0].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredBiographyBooks[1].id}`)
+        li.arrival-box
+          img(src=`${filteredBiographyBooks[1].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredBiographyBooks[1].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredBiographyBooks[2].id}`)
+        li.arrival-box
+          img(src=`${filteredBiographyBooks[2].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredBiographyBooks[2].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+    ul(style='display: flex')
+      a(href=`/read-book?id=${filteredBiographyBooks[3].id}`)
+        li.arrival-box
+          img(src=`${filteredBiographyBooks[3].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredBiographyBooks[3].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredBiographyBooks[4].id}`)
+        li.arrival-box
+          img(src=`${filteredBiographyBooks[4].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredBiographyBooks[4].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredBiographyBooks[5].id}`)
+        li.arrival-box
+          img(src=`${filteredBiographyBooks[5].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredBiographyBooks[5].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+  .self-help
+    h1.heading
+      span self-help
+    ul(style='display: flex')
+      a(href=`/read-book?id=${filteredSelfhelpBooks[0].id}`)
+        li.arrival-box
+          img(src=`${filteredSelfhelpBooks[0].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredSelfhelpBooks[0].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredSelfhelpBooks[1].id}`)
+        li.arrival-box
+          img(src=`${filteredSelfhelpBooks[1].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredSelfhelpBooks[1].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredSelfhelpBooks[2].id}`)
+        li.arrival-box
+          img(src=`${filteredSelfhelpBooks[2].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredSelfhelpBooks[2].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+    ul(style='display: flex')
+      a(href=`/read-book?id=${filteredSelfhelpBooks[3].id}`)
+        li.arrival-box
+          img(src=`${filteredSelfhelpBooks[3].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredSelfhelpBooks[3].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredSelfhelpBooks[4].id}`)
+        li.arrival-box
+          img(src=`${filteredSelfhelpBooks[4].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredSelfhelpBooks[4].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+      a(href=`/read-book?id=${filteredSelfhelpBooks[5].id}`)
+        li.arrival-box
+          img(src=`${filteredSelfhelpBooks[5].volumeInfo.imageLinks.smallThumbnail}` alt='')
+          h2= filteredSelfhelpBooks[5].volumeInfo.title.split(' ').slice(0, 2).join(' ')
+.ft
+  footer
+    .share
+      a.fab.fa-facebook-f(href='#')
+      a.fab.fa-twitter(href='#')
+      a.fab.fa-instagram(href='#')
+      a.fab.fa-linkedin(href='#')
+      a.fab.fa-pinterest(href='#')
+    .credit Copyright &copy; 2023 Company. All Rights Reserved.

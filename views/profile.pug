@@ -1,0 +1,27 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='css/profile.css')
+  title Your Profile
+br
+h1 Your Profile
+br
+if user
+.main-agileinfo(style='margin-left: 10px;')
+  .agileits-top
+    form#form1.form-user-data
+      input#username.text(type='text' name='Username'  value=`${user.name}`)
+      input#useremail.text.email(type='email' name='email'  value=`${user.email}`)
+      input(type='submit' value='SAVE CHANGES')
+    br
+    // <h3>Password Change</h3>
+    form#form2.form-user-password
+      input#password-current.text.w3lpass(type='password'  required,  name='password-current' placeholder='••••current Password••••' )
+      input#password.text(type='password' name='password'  required, placeholder='••••New Password••••' )
+      input#password-confirm.text.w3lpass(type='password' required,  name='password-confirm' placeholder='••••Confirm Password••••')
+      input.btn--save-password(type='submit' value='Save Password')
+      .wthree-text
+
+script(src='js/bundle.js')

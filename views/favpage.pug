@@ -1,0 +1,30 @@
+extends base
+
+block content
+  main.main
+   h1.fav-head Your Favorites
+    .card-container
+      if favoriteBooks.length > 0
+        each book in favoriteBooks
+          .card
+            .card__header
+              .card__picture
+                .card__picture-overlay &nbsp;
+                img.card__picture-img(src=`${book.volumeInfo.imageLinks.smallThumbnail}`, alt=`${book.volumeInfo.title}`)
+              h3.heading-tertirary
+                span= book.volumeInfo.title
+
+            .card__details
+              p.card__text= book.volumeInfo.subtitle
+            .card__footer
+              p
+                span.card__footer-text Author:
+                |
+                span.card__footer-value= `${book.volumeInfo.authors}`
+              p.card__ratings
+                span.card__footer-value= `${book.volumeInfo.publisher} Publication ` 
+                |
+                span.card__footer-text= ` Published ON: (${book.volumeInfo.publishedDate})`
+              a.btn.btn--green.btn--small(href=`/read-book?id=${book.id}`) Read Book
+      else
+        p No Book To show, Go ahead And Add to favorites

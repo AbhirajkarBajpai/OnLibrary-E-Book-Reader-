@@ -1,0 +1,70 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+  link(rel='stylesheet' href='css/style.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css')
+  title #{title}
+header.header
+  .header-1
+    a.logo(href='#' style='position: relative; left: -100px; font-size: 40px') onLibrary
+    form.search-form(action='/search-book')
+      input#search-box(type='search' name='searched' placeholder='search here...')
+      label.fas.fa-search(for='search-box' href='/search-book')
+    if user
+      a.nav__el.nav__el--logout Log out
+      a.nav__el(href='/get-your-favorites') Your favorites
+      a.nav__el(href='/me')
+        span= user.name.split(' ')[0]
+    else 
+      .icons
+        #search-btn.fas.fa-search
+        #login-btn.fas.fa-user
+
+  .header-2
+    nav.navbar
+      a(href='#header') home
+      a(href='/categories') categories
+      a(href='#heading') arrivals
+      a(href='#heading1') reviews
+nav.bottom-navbar
+  a.fas.fa-home(href='#header')
+  a.fas.fa-comments(href='#categories')
+  a.fas.fa-tags(href='#heading')
+  a.fas.fa-comments(href='#heading1')
+.login-form-container
+  #close-login-btn.fas.fa-times
+  form.form--login
+    h3 sign in
+    span username
+    input#email.box(type='email' name='' placeholder='enter your email')
+    span password
+    input#password.box(type='password' name='' placeholder='enter your password')
+    .checkbox
+      input#remember-me(type='checkbox' name='')
+      label(for='remember-me')  remember me
+    input.btn(type='submit' value='login')
+    p
+      | forget password ? 
+      a(href='/forgotpassword') click here
+    p
+      | don&apos;t have an account ? 
+      a(href='/signup') create one
+// CONTENT
+block content
+  h1 This is a placeholder heading
+.ft
+  footer
+    .share
+      a.fab.fa-facebook-f(href='#')
+      a.fab.fa-twitter(href='#')
+      a.fab.fa-instagram(href='#')
+      a.fab.fa-linkedin(href='#')
+      a.fab.fa-pinterest(href='#')
+    .credit Copyright &copy; 2023 OnLibrary. All Rights Reserved.
+
+script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')
+script(src='js/script.js')
+script(src='js/bundle.js')

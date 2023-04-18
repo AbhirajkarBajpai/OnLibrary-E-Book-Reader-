@@ -1,0 +1,16 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Book
+  link(rel='stylesheet' href='css/book.css')
+header
+  h1= `${Book.volumeInfo.title}`
+  input.isbn(type='text' value=`${Book.volumeInfo.industryIdentifiers[0].identifier}` style='display: none')
+  button.add-to-favorites(data-book-id=`${Book.id}`) ADD/Remove From Favorites
+  button#read-book-btn Read Now
+main
+  #viewerCanvas.mr-3.float-right
+script(type='text/javascript' src='https://www.google.com/books/jsapi.js')
+script(src='js/bundle.js')
+  </body>
+  </html>
