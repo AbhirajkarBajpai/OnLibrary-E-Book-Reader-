@@ -4,7 +4,7 @@ import { updateSettings } from "./updateSettings";
 import { initialiase } from "./bookPage";
 import { addToFavorites } from "./favorites";
 
-const loginForm = document.querySelector(".btn");
+const loginForm = document.querySelector(".form--login");
 const signupForm = document.querySelector(".form--signup");
 const logOutBtn = document.querySelector(".nav__el--logout");
 const userDataForm = document.querySelector(".form-user-data");
